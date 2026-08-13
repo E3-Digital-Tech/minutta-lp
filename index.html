@@ -153,6 +153,7 @@ h1,h2,h3{font-weight:400;letter-spacing:-.02em}
 .nav-links a{opacity:.85;transition:opacity .2s}
 .nav-links a:hover{opacity:1}
 .nav-cta{margin-left:auto;display:flex;align-items:center;gap:10px}
+.lbl-curto{display:none}
 @media(max-width:920px){.nav-links{display:none}.nav-in{padding:0 20px}}
 
 /* ================= reveals ================= */
@@ -836,10 +837,12 @@ footer{position:relative}
 
 /* ---------------- mobile ---------------- */
 @media(max-width:640px){
-  /* nav: marca + Entrar + CTA somam mais que 390px. O CTA sai daqui —
-     a snack fixa no rodapé já carrega a conversão a partir do scroll,
-     e o hero mantém o botão logo abaixo */
-  .nav-cta .btn-ink{display:none}
+  /* Sem o botão "Entrar", sobra espaço para o CTA no nav mesmo em 390px,
+     então ele volta a aparecer — o nav ficaria vazio de outro jeito.
+     Texto encurtado para não competir com a marca na mesma linha. */
+  .nav-cta .btn-ink{padding-left:14px;padding-right:14px;font-size:13px}
+  .nav-cta .btn-ink .lbl-full{display:none}
+  .nav-cta .btn-ink .lbl-curto{display:inline}
 
   /* hero: os dois CTAs lado a lado cortavam o primeiro */
   .hero-ctas{flex-direction:column;align-items:stretch;gap:10px}
@@ -894,8 +897,7 @@ footer{position:relative}
       <a href="#clientes">Clientes</a>
     </div>
     <div class="nav-cta">
-      <a class="btn" href="https://ember-crm.vercel.app/">Entrar <span class="ne">↗</span></a>
-      <a class="btn btn-ink" href="#contato">Falar com um vendedor <span class="ne">↗</span></a>
+      <a class="btn btn-ink" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener"><span class="lbl-full">Falar com um vendedor</span><span class="lbl-curto">Falar com vendas</span> <span class="ne">↗</span></a>
     </div>
   </div>
 </nav>
@@ -940,7 +942,7 @@ footer{position:relative}
       </h1>
       <p class="sub fr d2">Seu escritório previdenciário contém cada lead, cada prazo, cada honorário que importa. Organizar isso era impossível. Até agora.</p>
       <div class="hero-ctas fr d3">
-        <a class="btn btn-accent btn-lg sweep" href="#contato">
+        <a class="btn btn-accent btn-lg sweep" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">
           <span class="sw-dot eye"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.4 12S6.2 5.6 12 5.6 21.6 12 21.6 12 17.8 18.4 12 18.4 2.4 12 2.4 12z"/><circle cx="12" cy="12" r="3.1"/></svg></span>
           <span class="sw-lbl">
             <b class="l1">Falar com um vendedor</b>
@@ -1288,7 +1290,7 @@ footer{position:relative}
         <span class="ln"><span>escale com os agentes.</span></span>
       </h2>
       <p class="plans-lead fr d2">O CRM inteiro está em todos os planos. A diferença é quem responde o cliente: a sua equipe ou os agentes de IA — e, no Enterprise, até onde a operação vai. A proposta é montada com um vendedor, caso a caso.</p>
-      <a class="btn btn-ink btn-lg fr d3" href="#contato">Falar com um vendedor <span class="ne">↗</span></a>
+      <a class="btn btn-ink btn-lg fr d3" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
     </div>
 
     <div class="plan-grid" data-reveal>
@@ -1298,7 +1300,7 @@ footer{position:relative}
           <p class="plan-model">Atendimento pela sua equipe</p>
           <div class="plan-price"><span class="pp-cur">R$</span><span class="pp-val">397</span><span class="pp-per">/mês</span></div>
           <p class="plan-inst">ou <b>12x de R$ 330</b> no plano anual</p>
-          <a class="btn btn-ink" href="#contato">Falar com um vendedor <span class="ne">↗</span></a>
+          <a class="btn btn-ink" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
         </div>
         <div class="plan-inc">O CRM completo</div>
         <ul class="pfeat">
@@ -1321,7 +1323,7 @@ footer{position:relative}
           <p class="plan-model">Atendimento pelos agentes</p>
           <div class="plan-price"><span class="pp-cur">R$</span><span class="pp-val">797</span><span class="pp-per">/mês</span></div>
           <p class="plan-inst">ou <b>12x de R$ 664</b> no plano anual</p>
-          <a class="btn btn-ink" href="#contato">Falar com um vendedor <span class="ne">↗</span></a>
+          <a class="btn btn-ink" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
         </div>
         <p class="plan-base"><b>Tudo o que tem no Smart</b><span>Leads, agendamento, automações, prazos, honorários e relatórios — o CRM inteiro vem junto.</span></p>
         <div class="plan-extras">
@@ -1353,7 +1355,7 @@ footer{position:relative}
           <p class="plan-model">Os agentes na escala da sua operação</p>
           <div class="plan-price"><span class="pp-val pp-quote">Personalizado</span></div>
           <p class="plan-inst">dimensionado pelo <b>volume da sua operação</b></p>
-          <a class="btn btn-ink" href="#contato">Falar com um vendedor <span class="ne">↗</span></a>
+          <a class="btn btn-ink" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
         </div>
         <p class="plan-base"><b>Tudo o que tem no Plus</b><span>O CRM completo e os agentes de IA atendendo, qualificando e agendando sozinhos.</span></p>
         <div class="plan-inc">Dimensionado com você</div>
@@ -1404,7 +1406,7 @@ footer{position:relative}
     </h2>
     <p class="fr d2">A contratação é feita com um vendedor. Ele entende o tamanho da sua banca, mostra o sistema funcionando e monta a proposta com você.</p>
     <div class="row fr d3">
-      <a class="btn btn-lg" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
+      <a class="btn btn-lg" href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor <span class="ne">↗</span></a>
       <a class="btn btn-lg ghost" href="#produto">Ver o produto <span class="ne">↗</span></a>
     </div>
     <span class="note fr d4">Demonstração guiada · Implantação acompanhada · LGPD desde o dia 1</span>
@@ -1435,7 +1437,7 @@ footer{position:relative}
         <h4>Empresa</h4>
         <a href="#clientes">Clientes</a>
         <a href="#seguranca">Segurança</a>
-        <a href="#contato">Falar com um vendedor</a>
+        <a href="https://wa.me/5581991890805?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20adquirir%20o%20MINUTTA%20CRM." target="_blank" rel="noopener">Falar com um vendedor</a>
       </div>
       <div class="fcol">
         <h4>Legal</h4>
